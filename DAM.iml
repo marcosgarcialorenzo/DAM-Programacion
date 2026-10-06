@@ -4,9 +4,9 @@
     <content url="file://$MODULE_DIR$" dumb="true">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/.idea/dataSources" />
-      <excludeFolder url="file://$MODULE_DIR$/src/Curso2526/Programacion/ExamenesMGL/PendientesAñoPasado" />
       <excludeFolder url="file://$MODULE_DIR$/src/Programacion/Curso2526/Examenes" />
       <excludeFolder url="file://$MODULE_DIR$/src/Programacion/Curso2526/test" />
+      <excludeFolder url="file://$MODULE_DIR$/src/ExamenesMGL/PendientesAñoPasado" />
     </content>
   </component>
 </module>

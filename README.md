@@ -73,9 +73,9 @@ Estas son las practicas que tienen una estructura mas cercana a un proyecto comp
 
 | Practica | Ubicacion | Ejecucion |
 |---|---|---|
-| Hundir la flota | `src/Curso2526/Programacion/E/HundirLaFlota/` | Ejecutar `Curso2526.Programacion.E.HundirLaFlota.Main` |
-| DAO de personas | `src/Curso2526/Programacion/M/M1/` | Ejecutar `Curso2526.Programacion.M.M1.Main` |
-| DAO de coches | `src/Curso2526/Programacion/M/M2/` | Ejecutar `Curso2526.Programacion.M.M2.ui.Main` |
+| Hundir la flota | `src/Curso2526/Programacion/E/HundirLaFlota/` | Ejecutar `E` |
+| DAO de personas | `src/Curso2526/Programacion/M/M1/` | Ejecutar `M` |
+| DAO de coches | `src/Curso2526/Programacion/M/M2/` | Ejecutar `M` |
 | Pizzeria con H2 | `src/Curso2526/Programacion/M/Pizzeria/` | Ejecutar la clase `Pizzeria` desde IntelliJ |
 | Operaciones de texto | `src/Curso2627/AccesoADatos/RA1/Ejercicio1/` | Ejecutar `Curso2627.AccesoADatos.RA1.Ejercicio1.Main` |
 | Clientes y productos | `src/Curso2627/AccesoADatos/RA6/Ejercicio1/` | Ejecutar `Curso2627.AccesoADatos.RA6.Ejercicio1.Main` |
@@ -88,7 +88,7 @@ Los nombres completos de clase son orientativos para las practicas que tienen `m
 
 Los examenes se conservan separados del resto de ejercicios para que sea facil localizarlos:
 
-- `src/Curso2425/Programacion/Examenes/`
+- `src/Examenes`
 - `src/Curso2425/BasesDeDatos/Examenes/`
 - `src/Curso2526/Programacion/ExamenesMGL/`
 - `src/Curso2526/BasesDeDatos/ExamenesMGL/`
