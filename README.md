@@ -1,169 +1,152 @@
-# DAM
+# DAM - Programación
 
-Repositorio personal de ejercicios, practicas, examenes y material de estudio relativo a las asignaturas de Programacion, Bases de Datos y Acceso a Datos, del ciclo formativo de **Desarrollo de Aplicaciones Multiplataforma (DAM)**.
+Repositorio personal de ejercicios, prácticas y exámenes de **Programación** del ciclo formativo de **Desarrollo de Aplicaciones Multiplataforma (DAM)**.
 
-El repositorio esta organizado principalmente por curso y asignatura. La mayoria de los ejercicios son independientes y conservan su estructura original para poder abrirlos y ejecutarlos desde IntelliJ IDEA.
+El proyecto está preparado para abrirse con IntelliJ IDEA como proyecto Maven. Los ejercicios conservan, en general, su organización y nombres originales para que puedan ejecutarse de forma independiente.
 
-## Indice
+## Índice
 
-- [Estructura general](#estructura-general)
-- [Contenido por curso](#contenido-por-curso)
-- [Practicas principales](#practicas-principales)
-- [Examenes y simulacros](#examenes-y-simulacros)
-- [Ejercicios incompletos o en revision](#ejercicios-incompletos-o-en-revision)
+- [Contenido](#contenido)
+- [Estructura](#estructura)
 - [Requisitos](#requisitos)
+- [Configuración](#configuración)
 - [Compilar y ejecutar](#compilar-y-ejecutar)
+- [Datos y recursos](#datos-y-recursos)
+- [Estado del repositorio](#estado-del-repositorio)
 - [Convenciones](#convenciones)
+- [Licencia](#licencia)
 
-## Estructura general
+## Contenido
+
+Los ejercicios están agrupados por bloques de aprendizaje:
+
+| Ruta | Contenido |
+| --- | --- |
+| `src/A` - `src/E` | Fundamentos de Java, clases, objetos, herencia, arrays y estructuras de control |
+| `src/F` - `src/H` | Cadenas, búsqueda, cifrado, fechas, DNI y otros ejercicios de lógica |
+| `src/I` | Ficheros, directorios y operaciones de entrada/salida |
+| `src/J` - `src/K` | Ejercicios de modelado y gestión de información |
+| `src/L` | Colecciones, expresiones lambda y programación funcional |
+| `src/M` | Acceso a datos, DAO, H2 y práctica de pizzería |
+| `src/N` | Interfaces gráficas y calculadoras |
+| `src/Examenes` | Exámenes y ejercicios de evaluación |
+| `src/ExamenesMGL` | Evaluaciones, simulacros y prácticas de examen |
+| `src/HundirLaFlota` | Proyecto de consola de Hundir la Flota |
+
+También hay clases auxiliares compartidas en la raíz de `src`, como `Teclado` y `TecladoGrafico`.
+
+## Estructura
 
 ```text
-DAM/
+DAM-Programacion/
 ├── src/
-│   ├── Curso2425/
-│   │   ├── BasesDeDatos/
-│   │   └── Programacion/
-│   ├── Curso2526/
-│   │   ├── BasesDeDatos/
-│   │   └── Programacion/
-│   └── Curso2627/
-│       └── AccesoADatos/
-├── data/                 # Bases de datos H2 de ejemplo
-├── pom.xml               # Configuracion Maven
-├── README.md
-└── LICENSE
+│   ├── A/ ... N/          # Ejercicios organizados por bloques
+│   ├── Examenes/          # Exámenes
+│   ├── ExamenesMGL/       # Evaluaciones y simulacros
+│   ├── HundirLaFlota/     # Proyecto de consola
+│   ├── Teclado.java       # Utilidad de entrada
+│   └── TecladoGrafico.java
+├── data/                  # Base de datos H2 utilizada por algunas prácticas
+├── pom.xml                # Configuración Maven
+├── DAM-Programacion.iml  # Configuración de IntelliJ IDEA
+├── LICENSE
+└── README.md
 ```
 
-Dentro de `src` tambien hay recursos asociados a los ejercicios, como PDFs, scripts SQL, ficheros de texto, CSV, DAT y ZIPs de entregas.
-
-## Contenido por curso
-
-### Curso 2024-2025
-
-`src/Curso2425/`
-
-- `Programacion/`: ejercicios y examenes de Java.
-- `BasesDeDatos/`: ejercicios y examenes de SQL, PLSQL y MongoDB.
-- Incluye material de convocatorias ordinarias y soluciones de ejercicios de bases de datos.
-
-### Curso 2025-2026
-
-`src/Curso2526/`
-
-- `Programacion/`: ejercicios de Java organizados por bloques de aprendizaje (`A` a `N`), desde fundamentos y orientacion a objetos hasta ficheros, colecciones, lambdas y acceso a datos.
-- `Programacion/ExamenesMGL/`: examenes, simulacros y practicas de evaluacion.
-- `Programacion/HundirLaFlota/`: proyecto de consola con varias clases relacionadas.
-- `Programacion/M/`: ejercicios de acceso a datos, DAO, H2 y una practica de pizzeria.
-- `BasesDeDatos/SQL/`: ejercicios de SQL, tablas, consultas y vistas.
-- `BasesDeDatos/MongoDB/`: colecciones, consultas y soluciones.
-- `BasesDeDatos/UT08 PLSQL/`: procedimientos, funciones, cursores y triggers.
-
-### Curso 2026-2027
-
-`src/Curso2627/`
-
-- `AccesoADatos/RA1/Ejercicio1/`: operaciones con ficheros y directorios.
-- `AccesoADatos/RA6/Ejercicio1/`: gestion basica de clientes y productos.
-- `AccesoADatos/RA6/Ejercicio2/`: gestion de clientes, productos y pedidos.
-- `AccesoADatos/RA6/Ejercicio3/`: operaciones CRUD con clientes, productos, pedidos, oficinas y vendedores.
-
-## Practicas principales
-
-Estas son las practicas que tienen una estructura mas cercana a un proyecto completo:
-
-| Practica | Ubicacion | Ejecucion |
-|---|---|---|
-| Hundir la flota | `src/Curso2526/Programacion/E/HundirLaFlota/` | Ejecutar `E` |
-| DAO de personas | `src/Curso2526/Programacion/M/M1/` | Ejecutar `M` |
-| DAO de coches | `src/Curso2526/Programacion/M/M2/` | Ejecutar `M` |
-| Pizzeria con H2 | `src/Curso2526/Programacion/M/Pizzeria/` | Ejecutar la clase `Pizzeria` desde IntelliJ |
-| Operaciones de texto | `src/Curso2627/AccesoADatos/RA1/Ejercicio1/` | Ejecutar `Curso2627.AccesoADatos.RA1.Ejercicio1.Main` |
-| Clientes y productos | `src/Curso2627/AccesoADatos/RA6/Ejercicio1/` | Ejecutar `Curso2627.AccesoADatos.RA6.Ejercicio1.Main` |
-| Pedidos | `src/Curso2627/AccesoADatos/RA6/Ejercicio2/` | Ejecutar `Curso2627.AccesoADatos.RA6.Ejercicio2.Main` |
-| CRUD | `src/Curso2627/AccesoADatos/RA6/Ejercicio3/` | Ejecutar `Curso2627.AccesoADatos.RA6.Ejercicio3.Main` |
-
-Los nombres completos de clase son orientativos para las practicas que tienen `main`. Los ejercicios pequenos pueden tener varias clases ejecutables o depender de ficheros situados en su propia carpeta; en esos casos es preferible abrir la clase desde IntelliJ y ejecutarla con su configuracion.
-
-## Examenes y simulacros
-
-Los examenes se conservan separados del resto de ejercicios para que sea facil localizarlos:
-
-- `src/Examenes`
-- `src/Curso2425/BasesDeDatos/Examenes/`
-- `src/Curso2526/Programacion/ExamenesMGL/`
-- `src/Curso2526/BasesDeDatos/ExamenesMGL/`
-
-En estas carpetas puede haber enunciados, soluciones, recursos de entrada y entregas comprimidas. Los archivos ZIP representan entregas o copias de ejercicios y no son necesarios para compilar el proyecto principal.
-
-## Ejercicios incompletos o en revision
-
-El repositorio tambien contiene ejercicios empezados o pendientes de completar. Los mas claros actualmente son:
-
-- `src/Curso2627/AccesoADatos/RA1/Ejercicio1/OPERACIONESTEXTOS.java`: contiene metodos declarados pero aun sin implementar, como la creacion de ficheros y directorios, la copia de ficheros y el filtrado de lineas.
-- `src/Curso2627/AccesoADatos/RA6/Ejercicio3/OperacionesCRUD.java`: contiene operaciones CRUD pendientes o con resultados provisionales.
-- `src/Curso2627/AccesoADatos/RA6/Ejercicio2/GestorDatos.java`: algunas busquedas devuelven `null` cuando no encuentran datos; debe comprobarse si es el comportamiento esperado del ejercicio.
-- Las carpetas `Examenes`, `ExamenesMGL` y `Simulacro` deben considerarse material de evaluacion, no necesariamente proyectos terminados.
-
-Esta lista es deliberadamente conservadora: que un metodo devuelva `null` no siempre significa que este incompleto, ya que puede ser parte del comportamiento solicitado por el ejercicio.
+El `pom.xml` define `src` como directorio de código fuente para mantener esta organización académica. Por ese motivo no se utiliza la estructura Maven convencional `src/main/java`.
 
 ## Requisitos
 
-- JDK 21.
-- Maven.
-- IntelliJ IDEA recomendado.
-- Lombok, declarado como dependencia Maven para los ejercicios que lo utilizan.
-- H2, declarado como dependencia Maven para las practicas que acceden a esa base de datos.
+- **JDK 21**.
+- **Apache Maven** 3.8 o posterior.
+- **IntelliJ IDEA** (recomendado para seleccionar y ejecutar cada ejercicio).
+- Conexión a Internet durante la primera compilación para descargar dependencias.
 
-La configuracion principal esta en `pom.xml`. El proyecto utiliza `src` como directorio de codigo fuente para conservar la organizacion academica actual.
+Dependencias declaradas en Maven:
+
+- **Lombok 1.18.42**, con alcance `provided`.
+- **H2 Database 2.3.232**, con alcance `runtime`.
+
+## Configuración
+
+1. Clona el repositorio y ábrelo en IntelliJ IDEA.
+2. Importa el proyecto como proyecto Maven.
+3. Configura el SDK del proyecto y Maven para utilizar JDK 21.
+4. Activa el procesamiento de anotaciones si IntelliJ lo solicita para los ejercicios que utilizan Lombok.
+5. Conserva como directorio de trabajo la raíz del repositorio, salvo que el ejercicio indique una ruta relativa distinta.
 
 ## Compilar y ejecutar
 
-Desde la raiz del repositorio:
+Desde la raíz del repositorio:
 
 ```bash
-mvn -q compile
+mvn compile
 ```
 
-Para ejecutar una clase compilada:
+Para eliminar los archivos generados y compilar de nuevo:
 
 ```bash
-java -cp target/classes Curso2627.AccesoADatos.RA1.Ejercicio1.Main
+mvn clean compile
 ```
 
-Tambien se puede ejecutar cualquier clase con `main` desde IntelliJ IDEA:
+La forma recomendada de ejecutar un ejercicio es abrir en IntelliJ IDEA la clase que contiene `main` y utilizar **Run**. Algunos ejemplos son:
 
-1. Importar el proyecto como proyecto Maven.
-2. Seleccionar JDK 21.
-3. Abrir la clase que contiene `main`.
-4. Ejecutarla con **Run**.
+| Ejercicio | Clase principal |
+| --- | --- |
+| Hundir la Flota | `HundirLaFlota.Main` |
+| Práctica de pizzería | `M.Pizzeria.Pizzeria` |
+| DAO de personas | `M.M1.Main` |
+| DAO de coches | `M.M2.ui.Main` |
+| Calculadora | `N.N2.Calculadora` |
 
-Algunas practicas necesitan ficheros de entrada relativos a su carpeta. Si una ejecucion no encuentra un recurso, revisar el **Working directory** de la configuracion de IntelliJ y establecer la raiz del repositorio o la carpeta de la practica, segun la ruta utilizada por el ejercicio.
+También es posible ejecutar una clase compilada desde la línea de comandos:
 
-La carpeta `data/` contiene archivos H2 de ejemplo. No debe borrarse mientras se utilicen las practicas que se conectan a esa base de datos.
+```bash
+java -cp target/classes HundirLaFlota.Main
+```
+
+El nombre completo de la clase depende del paquete declarado en cada ejercicio. Si una práctica no encuentra un fichero de entrada, revisa el **Working directory** de la configuración de ejecución de IntelliJ.
+
+## Datos y recursos
+
+La carpeta `data/` contiene archivos de la base de datos H2 usados por algunas prácticas de acceso a datos. No la elimines mientras ejecutes esos ejercicios.
+
+Los ejercicios pueden incluir recursos locales, como imágenes, fuentes, documentos o archivos comprimidos. Mantén el directorio de trabajo esperado por cada práctica para que sus rutas relativas funcionen correctamente.
+
+Los directorios `target/` y `out/` son generados por las herramientas de compilación y están excluidos del control de versiones.
+
+## Estado del repositorio
+
+Este repositorio tiene finalidad académica. Contiene ejercicios de distinta complejidad y grado de finalización:
+
+- Los bloques `A` a `N` reúnen ejercicios independientes y prácticas de clase.
+- `Examenes` y `ExamenesMGL` contienen enunciados, soluciones y simulacros.
+- Algunas clases son borradores o dependen de recursos externos; no todos los ejercicios representan una aplicación terminada.
+- Las prácticas de acceso a datos pueden modificar la base de datos local de `data/`.
 
 ## Convenciones
 
-- Los paquetes siguen la organizacion por curso, asignatura y ejercicio.
-- Los ejercicios antiguos mantienen sus nombres originales para no romper paquetes ni rutas.
-- Las clases nuevas deberian utilizar `PascalCase`.
-- Los metodos y variables deberian utilizar `camelCase`.
-- Los commits siguen una convencion similar a Conventional Commits:
+- Los paquetes siguen la organización por bloque y ejercicio.
+- Se mantienen nombres originales para no romper paquetes, rutas ni ejercicios existentes.
+- Las clases nuevas utilizan `PascalCase`.
+- Los métodos y variables utilizan `camelCase`.
+- Los commits siguen una convención similar a Conventional Commits:
 
 ```text
-<tipo>: <descripcion corta>
+<tipo>: <descripción corta>
 ```
 
 Tipos habituales:
 
 - `feat`: nuevo ejercicio o funcionalidad.
-- `fix`: correccion de un error.
-- `refactor`: reorganizacion interna sin cambiar el comportamiento.
-- `docs`: cambios de documentacion.
+- `fix`: corrección de un error.
+- `refactor`: reorganización interna sin cambiar el comportamiento.
+- `docs`: cambios de documentación.
 
 ## Licencia
 
-Este proyecto se distribuye bajo la licencia MIT. Consulta `LICENSE` para ver el texto completo.
+Este proyecto se distribuye bajo la licencia MIT. Consulta [`LICENSE`](LICENSE) para ver el texto completo.
 
 ## Autor
 
-**Marcos Garcia Lorenzo**
+**Marcos García Lorenzo**
