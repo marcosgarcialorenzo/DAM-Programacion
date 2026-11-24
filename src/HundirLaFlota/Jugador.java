@@ -1,6 +1,6 @@
 package HundirLaFlota;
 
-public class Jugador {
+public class Jugador { // Clase que representa a un jugador en el juego
     String nombre;
     int barcos;
     int id;
