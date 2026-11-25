@@ -11,7 +11,7 @@ public class Jugador { // Clase que representa a un jugador en el juego
         this.barcos = 1;
     }
 
-    boolean hayBarcos() {
+    boolean hayBarcos() { // Método que verifica si el jugador tiene barcos
         if (this.barcos <= 0) {
             return true;
         }
